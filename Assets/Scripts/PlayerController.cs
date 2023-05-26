@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] Collider2D feet;
+    [SerializeField] Sprite[] JumpSpriteSequence;
 
     public bool isActive = true;
 
@@ -16,6 +18,8 @@ public class PlayerController : MonoBehaviour
     Vector2 rawInput;
     bool isJumping;
     Rigidbody2D rb;
+    Animator anim;
+    SpriteRenderer spriteRenderer;
 
 
     const string platformLayer = "Platform";
@@ -23,6 +27,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -30,12 +36,28 @@ public class PlayerController : MonoBehaviour
         //Move the player
         rb.velocity = new Vector2(rawInput.x * moveSpeed, rb.velocity.y);
 
+        //Set animation
+        anim.SetFloat("Speed", Math.Abs(rawInput.x * moveSpeed));
+        anim.SetFloat("Speed_Y", rb.velocity.y);
+        anim.SetBool("IsGrounded", feet.IsTouchingLayers(LayerMask.GetMask(platformLayer)));
+
+        //Flip the player
+        if (rawInput.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (rawInput.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+
         //Make the player jump
         if (isJumping)
         {
             rb.velocity += new Vector2(0f, jumpForce);
             isJumping = false;
         }
+
     }
 
     //Used by the input system 
