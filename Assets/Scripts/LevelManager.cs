@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
         }
     }
     #endregion
-
+    int currentLevel = 0;
     PlayerController player;
 
     void Start()
@@ -42,5 +42,10 @@ public class LevelManager : MonoBehaviour
     {
         player.isActive = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
