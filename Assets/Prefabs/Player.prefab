@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4253297328530706513}
   - component: {fileID: 4253297328530706515}
-  - component: {fileID: 881900718665398578}
+  - component: {fileID: 6186659903476602986}
   - component: {fileID: 4253297328530706512}
   - component: {fileID: 4253297328530706517}
   m_Layer: 0
@@ -58,8 +58,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &881900718665398578
-CircleCollider2D:
+--- !u!70 &6186659903476602986
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -71,9 +71,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.45448178
+  m_Offset: {x: 0, y: 0.021974802}
+  m_Size: {x: 0.5, y: 0.9560504}
+  m_Direction: 0
 --- !u!114 &4253297328530706512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,10 +119,6 @@ MonoBehaviour:
   moveSpeed: 6
   jumpForce: 10
   feet: {fileID: 4253297329264242477}
-  JumpSpriteSequence:
-  - {fileID: 1367120365, guid: 559c2449da2836f4a876fb6679f5b722, type: 3}
-  - {fileID: 512730298, guid: 559c2449da2836f4a876fb6679f5b722, type: 3}
-  - {fileID: 762172493, guid: 559c2449da2836f4a876fb6679f5b722, type: 3}
   isActive: 1
 --- !u!1 &4253297329264242479
 GameObject:
@@ -180,7 +176,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6914544, y: 0.07177591}
+  m_Size: {x: 0.40236413, y: 0.07177591}
   m_EdgeRadius: 0
 --- !u!1 &4253297329431871022
 GameObject:
@@ -256,7 +252,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 2003449026, guid: 4d8af2a3dc6f2ee46a3ea2b1919307e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -264,7 +260,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 1.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2125199487898633455
