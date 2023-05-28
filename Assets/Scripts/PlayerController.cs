@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] Collider2D feet;
-    [SerializeField] Sprite[] JumpSpriteSequence;
 
     public bool isActive = true;
 

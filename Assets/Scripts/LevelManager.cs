@@ -30,7 +30,6 @@ public class LevelManager : MonoBehaviour
         }
     }
     #endregion
-    int currentLevel = 0;
     PlayerController player;
 
     void Start()
