@@ -30,8 +30,15 @@ public class SoundManager : MonoBehaviour
     }
     #endregion
 
+    [SerializeField] AudioClip music;
+
     public AudioSource[] EffectsSources;
     public AudioSource MusicSource;
+
+    private void Start()
+    {
+        PlayMusic(music);
+    }
 
     public void Play(AudioClip clip)
     {

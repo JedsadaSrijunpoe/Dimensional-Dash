@@ -6250,6 +6250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec4b5935b4998d4da15974e0f5d843b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: 1a440b6a3dfa05d4d84bb7067b6eabad, type: 3}
   EffectsSources:
   - {fileID: 2108594283}
   - {fileID: 2108594285}
@@ -6268,7 +6269,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
