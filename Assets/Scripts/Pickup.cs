@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    [SerializeField] AudioClip collectSound;
+
     void OnTriggerEnter2D(Collider2D other) 
     {
         //Add the coin to the player wallet when collectd
@@ -12,6 +14,7 @@ public class Pickup : MonoBehaviour
         {
             wallet.IncrementCoins();
             Destroy(gameObject);
+            SoundManager.Instance.Play(collectSound);
         }
     }
 }

@@ -119,6 +119,7 @@ MonoBehaviour:
   moveSpeed: 6
   jumpForce: 10
   feet: {fileID: 4253297329264242477}
+  jumpSound: {fileID: 8300000, guid: 7c03edcb7f26098459cec5a108ff8703, type: 3}
   isActive: 1
 --- !u!1 &4253297329264242479
 GameObject:

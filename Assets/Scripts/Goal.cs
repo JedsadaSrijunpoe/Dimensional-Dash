@@ -7,6 +7,7 @@ public class Goal : MonoBehaviour
     [SerializeField] int target;
     [SerializeField] Color defaultColor = Color.red;
     [SerializeField] Color unlockColor = Color.blue;
+    [SerializeField] AudioClip goalSound;
     
     SpriteRenderer spriteRenderer;
     Wallet playerWallet;
@@ -37,6 +38,7 @@ public class Goal : MonoBehaviour
         {
             if(isUnlocked) {
                 LevelManager.Instance.LoadNextLevel();
+                SoundManager.Instance.Play(goalSound);
             }
         }
     }

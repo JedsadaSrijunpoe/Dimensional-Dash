@@ -127,3 +127,4 @@ MonoBehaviour:
   target: 10
   defaultColor: {r: 1, g: 0.6666667, b: 0.10980392, a: 1}
   unlockColor: {r: 0.105882354, g: 0.74509805, b: 1, a: 1}
+  goalSound: {fileID: 8300000, guid: 6ab0449b12931044598d039e2f71fc82, type: 3}
